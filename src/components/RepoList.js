@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react"
 import axios from "axios"
+import RepoItem from "./RepoItem"
 
 const RepoList = ({userObj}) => {
     const [repoList, setRepoList] = useState()
@@ -19,8 +20,10 @@ const RepoList = ({userObj}) => {
         }
       }
     return (
-        <div>
-
+        
+        <div className="repo-list-container">
+            {repoList && <><h1 className="repo-list-header">Showing public repositories for {userObj.login}</h1>
+             {repoList.map(repo => <RepoItem key = {repo.id} repo = {repo}/>)}</>}
         </div>
 
     )
