@@ -1,6 +1,33 @@
-# Getting Started with Create React App
+# Github Repo Grabber
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+An simple yet elegant way to easily see all public repositories of you or your friends at a glance.
+
+## Deploy:
+
+Built and Deployed for public use using Netlify at: https://github-repo-grabber.netlify.app/
+
+## Programming Language(s):
+- Javascript ES6
+- CSS3
+- HTML5
+
+## Framework(s):
+- React (v. 17)
+
+## Libraries:
+- [Axios](https://github.com/axios/axios)
+
+## API(s):
+- [Github](https://docs.github.com/en/rest/overview)
+
+## How to use/retrieve data:
+- The username for the GitHub user is parsed from the URL path 
+  - e.g. localhost:8080/gandalf would render the data for the user gandalf
+- Alternatively, you can use the search form on the page to search for the desired username
+- Basic data for all repositories is listed.  Clicking on the user name will link to their github page, and clicking on an individual repository name will link to that repository github page.
+- Enjoy!
 
 ## Available Scripts
 
