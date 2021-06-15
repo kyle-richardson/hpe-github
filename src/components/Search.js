@@ -23,8 +23,8 @@ const Search = ({setUserObj}) => {
         }
     }
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
+        <div className="search-container">
+            <form onSubmit={handleSubmit} className="search-form">
                 <input 
                     type="text"
                     name="user"

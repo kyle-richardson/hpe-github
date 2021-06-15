@@ -8,8 +8,7 @@ const RepoItem = ({repo}) => {
 
     return (
         <div className="repo-item-card">
-            <h2 className="repo-item-header">{repo.name}</h2>
-            <p style={{textAlign: "center", marginTop: "0"}}><a href={repo.html_url} target="_blank">View repository on Github</a></p>
+            <h2 className="repo-item-header"><a href={repo.html_url} target="_blank" title="Open repo in a new tab">{repo.name}</a></h2>
             <p>Description: {repo.description ? repo.description : "N/A"}</p>
             <p>Stars: {repo.stargazers_count}</p>
             <p>Main language: {repo.language ? repo.language : "N/A"}</p>
