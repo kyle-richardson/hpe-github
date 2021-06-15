@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-An simple yet elegant way to easily see all public repositories of you or your friends at a glance.
+A simple yet elegant way to easily see all public repositories of you or your friends at a glance.
 
 ## Deploy:
 
