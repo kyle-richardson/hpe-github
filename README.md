@@ -18,6 +18,7 @@ Built and Deployed for public use using Netlify at: https://github-repo-grabber.
 
 ## Libraries:
 - [Axios](https://github.com/axios/axios)
+- [React Router](https://reactrouter.com/web/guides/quick-start)
 
 ## API(s):
 - [Github](https://docs.github.com/en/rest/overview)
