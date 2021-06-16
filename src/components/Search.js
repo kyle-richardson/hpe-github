@@ -1,4 +1,3 @@
-
 import React, {useEffect, useState} from "react"
 import axios from "axios"
 
@@ -18,12 +17,10 @@ const Search = ({setUserObj, path, setError}) => {
         if(search) {
             window.location.pathname = `/${search}`
         }
-       
     }
     const getUser = async (str) => {
         try {
             const user = await axios.get(`https://api.github.com/users/${str}`)
-            console.log(user.data)
             setUserObj(user.data)
         }
         catch(err) {
@@ -38,6 +35,7 @@ const Search = ({setUserObj, path, setError}) => {
                     type="text"
                     name="user"
                     onChange = {handleChange}
+                    placeholder="Enter a GitHub username"
                 />
                 <button
                     type="submit"

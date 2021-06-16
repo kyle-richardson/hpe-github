@@ -8,6 +8,8 @@ function App() {
   const [error, setError] = useState()
 
   // looks at url path, useEffect to have it only happen on App.js mount
+  //TODO: fix issue where this implementation does not work with netlify or other public 
+  //cloud deploys. May need to use React Router instead.
   useEffect(()=> {
     if(window.location.pathname) {
       setPath(window.location.pathname.substring(1))
@@ -17,7 +19,7 @@ function App() {
       setError("No user searched.  Please add a username in the url or use the search at the top of this page.")
     }
   },[])
-  
+
   return (
       <div className="App">
       <header id="app-header">

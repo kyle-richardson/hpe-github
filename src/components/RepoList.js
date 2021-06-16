@@ -1,13 +1,24 @@
 import React, {useState, useEffect} from "react"
 import axios from "axios"
 import RepoItem from "./RepoItem"
+import useInterval from "../utils/useInterval"
 
 const RepoList = ({userObj}) => {
     const [repoList, setRepoList] = useState()
+    //polling interval constant
+    const pollingInterval = 1000 * 5
+
+    //react custom hook to abstract out polling api
+    useInterval(async () => {
+      if(userObj){
+        await getRepos()
+      }
+    }, pollingInterval)
+
     useEffect(()=> {
-        if(!!userObj){
-            getRepos()
-        }
+      if(userObj){
+        getRepos()
+      }
     }, [userObj])
     const getRepos = async () => {
         try {
