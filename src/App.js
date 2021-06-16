@@ -1,18 +1,17 @@
 import React, {useEffect, useState} from "react"
 import Search from "./components/Search"
 import RepoList from "./components/RepoList"
+import {useParams} from "react-router-dom"
 
 function App() {
+  const {user} = useParams()
   const [userObj, setUserObj] = useState(null)
   const [path, setPath] = useState("")
   const [error, setError] = useState()
 
-  // looks at url path, useEffect to have it only happen on App.js mount
-  //TODO: fix issue where this implementation does not work with netlify or other public 
-  //cloud deploys. May need to use React Router instead.
   useEffect(()=> {
-    if(window.location.pathname) {
-      setPath(window.location.pathname.substring(1))
+    if(user) {
+      setPath(user)
       setError(null)
     }
     else {
